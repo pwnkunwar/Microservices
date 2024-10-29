@@ -4,3 +4,4 @@
 *.http
 *appsettings.json
 *.vs*
+*appsettings.Development.json
