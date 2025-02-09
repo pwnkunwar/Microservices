@@ -1,0 +1,11 @@
+User adds first item to the Cart 
+- Create Cart Header
+- Create Cart Details
+
+User adds a new item in the shopping cart.(User already has few other items in cart)
+- Find Cart Header
+- Add Cart Details under same Cart Header Id
+
+User updates quantity of an existing item in the cart
+- Find Details
+- Update Count in Cart Details
