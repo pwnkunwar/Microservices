@@ -8,7 +8,7 @@ namespace Mango.Services.ShoppingCartAPI.Services
     public class ProductService : IProductService
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        public ProductService(IHttpClientFactory clientFactory
+        public ProductService(IHttpClientFactory clientFactory)
         {
             _httpClientFactory = clientFactory;
         }
@@ -16,7 +16,7 @@ namespace Mango.Services.ShoppingCartAPI.Services
         {
             var client = _httpClientFactory.CreateClient("Product");
             var response = await client.GetAsync($"/api/product");
-            var apiContent = await response.Content.ReadAsStreamAsync();
+            var apiContent = await response.Content.ReadAsStringAsync();
             var resp = JsonConvert.DeserializeObject<ResponseDto>(apiContent);
             if(resp.IsSuccess)
             {
